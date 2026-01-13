@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database Container
+  postgres:
+    image: postgres:15-alpine
+    container_name: ecommerce_postgres
+    environment:
+      POSTGRES_USER: sparkuser
+      POSTGRES_PASSWORD: sparkpass123
+      POSTGRES_DB: ecommerce_events
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - spark_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sparkuser -d ecommerce_events"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Apache Spark Master Container
+  spark-master:
+    image: apache/spark:3.5.0-scala2.12-java11-python3-ubuntu
+    container_name: ecommerce_spark_master
+    command: >
+      /opt/spark/bin/spark-class 
+      org.apache.spark.deploy.master.Master
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - PYTHONPATH=/opt/spark-apps
+    ports:
+      - "8080:8080"  # Spark Master Web UI
+      - "7077:7077"  # Spark Master port
+      - "4040:4040"  # Spark Application UI
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./data:/opt/spark-data
+    networks:
+      - spark_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # Spark Worker Container
+  spark-worker:
+    image: apache/spark:3.5.0-scala2.12-java11-python3-ubuntu
+    container_name: ecommerce_spark_worker
+    command: >
+      /opt/spark/bin/spark-class 
+      org.apache.spark.deploy.worker.Worker 
+      spark://spark-master:7077
+    environment:
+      - SPARK_NO_DAEMONIZE=true
+      - SPARK_WORKER_MEMORY=2G
+      - SPARK_WORKER_CORES=2
+      - PYTHONPATH=/opt/spark-apps
+    ports:
+      - "8081:8081"  # Worker Web UI
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./data:/opt/spark-data
+    networks:
+      - spark_network
+    depends_on:
+      - spark-master
+
+  # pgAdmin - PostgreSQL GUI Tool
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: ecommerce_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"  # Access pgAdmin at localhost:5050
+    networks:
+      - spark_network
+    depends_on:
+      - postgres
+
+# Define the network
+networks:
+  spark_network:
+    driver: bridge
+
+# Define persistent storage
+volumes:
+  postgres_data:

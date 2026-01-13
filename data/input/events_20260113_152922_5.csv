@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_1985,view,PROD_4656,Winter Jacket,Clothing,129.99,2026-01-13 15:29:22,session_591524,mobile
+user_7011,purchase,PROD_6186,Hair Dryer,Beauty,44.99,2026-01-13 15:29:22,session_162435,tablet
+user_1579,view,PROD_2277,Hair Dryer,Beauty,44.99,2026-01-13 15:29:22,session_364228,tablet
+user_1784,view,PROD_9459,Water Bottle,Sports & Outdoors,19.99,2026-01-13 15:29:22,session_908819,tablet
+user_8924,view,PROD_7675,Makeup Kit,Beauty,54.99,2026-01-13 15:29:22,session_154186,desktop
+user_4054,purchase,PROD_8676,Cookbook,Books,24.99,2026-01-13 15:29:22,session_904351,desktop
+user_9772,view,PROD_6114,Air Freshener,Automotive,9.99,2026-01-13 15:29:22,session_862752,mobile
+user_8805,view,PROD_4900,Puzzle,Toys & Games,19.99,2026-01-13 15:29:22,session_736384,desktop
+user_8021,purchase,PROD_8899,Floor Mats,Automotive,34.99,2026-01-13 15:29:22,session_344374,tablet
+user_8714,purchase,PROD_1400,Board Game,Toys & Games,34.99,2026-01-13 15:29:22,session_751483,tablet

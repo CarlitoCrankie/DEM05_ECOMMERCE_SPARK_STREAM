@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_5133,view,PROD_2723,Winter Jacket,Clothing,129.99,2026-01-13 15:30:32,session_628617,tablet
+user_3935,view,PROD_6423,Face Cream,Beauty,29.99,2026-01-13 15:30:32,session_905851,mobile
+user_7377,purchase,PROD_5651,Phone Case,Electronics,15.99,2026-01-13 15:30:32,session_998790,tablet
+user_7768,view,PROD_5371,Wireless Mouse,Electronics,29.99,2026-01-13 15:30:32,session_139587,mobile
+user_6113,view,PROD_2028,Bluetooth Speaker,Electronics,49.99,2026-01-13 15:30:32,session_687831,mobile
+user_8422,view,PROD_2676,Board Game,Toys & Games,34.99,2026-01-13 15:30:32,session_727174,tablet
+user_8757,view,PROD_6823,Hair Dryer,Beauty,44.99,2026-01-13 15:30:32,session_758676,mobile
+user_2220,purchase,PROD_2286,Laptop Stand,Electronics,34.99,2026-01-13 15:30:32,session_409349,mobile
+user_9354,purchase,PROD_1422,Denim Jeans,Clothing,45.99,2026-01-13 15:30:32,session_923482,mobile
+user_3741,view,PROD_4971,Cotton T-Shirt,Clothing,19.99,2026-01-13 15:30:32,session_678638,desktop

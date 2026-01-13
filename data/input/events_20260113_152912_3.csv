@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_6016,view,PROD_1089,Car Phone Mount,Automotive,19.99,2026-01-13 15:29:12,session_787470,tablet
+user_1162,view,PROD_6469,Water Bottle,Sports & Outdoors,19.99,2026-01-13 15:29:12,session_525462,mobile
+user_4526,view,PROD_4047,Fiction Novel,Books,14.99,2026-01-13 15:29:12,session_587738,mobile
+user_7467,purchase,PROD_1840,USB-C Cable,Electronics,12.99,2026-01-13 15:29:12,session_677216,tablet
+user_7663,purchase,PROD_4893,USB-C Cable,Electronics,12.99,2026-01-13 15:29:12,session_947612,tablet
+user_4950,view,PROD_2102,Remote Control Car,Toys & Games,49.99,2026-01-13 15:29:12,session_995928,mobile
+user_1352,view,PROD_3892,Coffee Maker,Home & Kitchen,79.99,2026-01-13 15:29:12,session_824215,mobile
+user_4121,view,PROD_9246,Running Shoes,Clothing,89.99,2026-01-13 15:29:12,session_130552,desktop
+user_2986,view,PROD_3289,Winter Jacket,Clothing,129.99,2026-01-13 15:29:12,session_574385,mobile
+user_2470,view,PROD_1451,Python Programming,Books,34.99,2026-01-13 15:29:12,session_718233,desktop

@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_9582,purchase,PROD_9694,Dash Cam,Automotive,89.99,2026-01-13 15:29:57,session_172807,mobile
+user_3471,view,PROD_6693,Laptop Stand,Electronics,34.99,2026-01-13 15:29:57,session_444491,mobile
+user_2955,view,PROD_5218,Hiking Backpack,Sports & Outdoors,79.99,2026-01-13 15:29:57,session_438574,desktop
+user_7656,view,PROD_5665,Face Cream,Beauty,29.99,2026-01-13 15:29:57,session_231118,mobile
+user_2765,view,PROD_5682,Remote Control Car,Toys & Games,49.99,2026-01-13 15:29:57,session_628287,mobile
+user_3775,view,PROD_8932,Dash Cam,Automotive,89.99,2026-01-13 15:29:57,session_550529,desktop
+user_1446,view,PROD_2277,Blender,Home & Kitchen,59.99,2026-01-13 15:29:57,session_590665,mobile
+user_4563,view,PROD_2355,Cookbook,Books,24.99,2026-01-13 15:29:57,session_374581,desktop
+user_2527,view,PROD_5939,Kitchen Knife Set,Home & Kitchen,69.99,2026-01-13 15:29:57,session_385022,tablet
+user_1387,view,PROD_5984,Running Shoes,Clothing,89.99,2026-01-13 15:29:57,session_679234,mobile

@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_2377,view,PROD_4736,Car Phone Mount,Automotive,19.99,2026-01-13 15:29:27,session_471283,desktop
+user_7794,view,PROD_1210,Tennis Racket,Sports & Outdoors,89.99,2026-01-13 15:29:27,session_901478,mobile
+user_6893,view,PROD_4479,Bed Sheets,Home & Kitchen,39.99,2026-01-13 15:29:27,session_919475,mobile
+user_1291,view,PROD_1234,Face Cream,Beauty,29.99,2026-01-13 15:29:27,session_995939,desktop
+user_5651,view,PROD_3307,Makeup Kit,Beauty,54.99,2026-01-13 15:29:27,session_241048,desktop
+user_5541,view,PROD_7708,LEGO Set,Toys & Games,59.99,2026-01-13 15:29:27,session_392823,mobile
+user_2049,view,PROD_7476,Car Vacuum,Automotive,39.99,2026-01-13 15:29:27,session_808759,desktop
+user_3832,view,PROD_8140,LEGO Set,Toys & Games,59.99,2026-01-13 15:29:27,session_496415,mobile
+user_6521,view,PROD_6400,Running Shoes,Clothing,89.99,2026-01-13 15:29:27,session_244925,desktop
+user_5626,view,PROD_3316,Data Science Handbook,Books,42.99,2026-01-13 15:29:27,session_158836,tablet

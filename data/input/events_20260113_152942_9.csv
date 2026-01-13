@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_8414,view,PROD_8848,Dish Set,Home & Kitchen,45.99,2026-01-13 15:29:42,session_392340,mobile
+user_4943,view,PROD_6688,Dish Set,Home & Kitchen,45.99,2026-01-13 15:29:42,session_687995,tablet
+user_8235,view,PROD_7392,Action Figure,Toys & Games,24.99,2026-01-13 15:29:42,session_397170,mobile
+user_1539,view,PROD_3141,Water Bottle,Sports & Outdoors,19.99,2026-01-13 15:29:42,session_137102,tablet
+user_5649,view,PROD_4904,Cookbook,Books,24.99,2026-01-13 15:29:42,session_522280,desktop
+user_1141,view,PROD_1455,Coffee Maker,Home & Kitchen,79.99,2026-01-13 15:29:42,session_107366,mobile
+user_8775,view,PROD_6612,USB-C Cable,Electronics,12.99,2026-01-13 15:29:42,session_268351,mobile
+user_2119,view,PROD_4746,Camping Tent,Sports & Outdoors,149.99,2026-01-13 15:29:42,session_209042,desktop
+user_1730,view,PROD_4410,Perfume,Beauty,79.99,2026-01-13 15:29:42,session_513344,mobile
+user_9522,view,PROD_8888,Kitchen Knife Set,Home & Kitchen,69.99,2026-01-13 15:29:42,session_978534,tablet

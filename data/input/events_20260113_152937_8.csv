@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_2745,purchase,PROD_4929,Cotton T-Shirt,Clothing,19.99,2026-01-13 15:29:37,session_508028,desktop
+user_9606,view,PROD_3324,Running Shoes,Clothing,89.99,2026-01-13 15:29:37,session_989783,desktop
+user_8954,purchase,PROD_5455,Cookbook,Books,24.99,2026-01-13 15:29:37,session_463181,tablet
+user_3812,view,PROD_1382,Denim Jeans,Clothing,45.99,2026-01-13 15:29:37,session_918795,mobile
+user_3496,purchase,PROD_5030,Cookbook,Books,24.99,2026-01-13 15:29:37,session_249735,mobile
+user_5227,purchase,PROD_1945,Bluetooth Speaker,Electronics,49.99,2026-01-13 15:29:37,session_167795,mobile
+user_9190,view,PROD_8692,Camping Tent,Sports & Outdoors,149.99,2026-01-13 15:29:37,session_200952,tablet
+user_6049,view,PROD_7231,Perfume,Beauty,79.99,2026-01-13 15:29:37,session_613411,mobile
+user_5633,view,PROD_3310,Puzzle,Toys & Games,19.99,2026-01-13 15:29:37,session_858608,mobile
+user_9246,view,PROD_5910,Floor Mats,Automotive,34.99,2026-01-13 15:29:37,session_850879,tablet

@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_5869,view,PROD_9269,Laptop Stand,Electronics,34.99,2026-01-13 15:29:17,session_453411,mobile
+user_8608,view,PROD_8803,Shampoo,Beauty,12.99,2026-01-13 15:29:17,session_189438,mobile
+user_6433,view,PROD_9969,Running Shoes,Clothing,89.99,2026-01-13 15:29:17,session_687001,desktop
+user_1250,view,PROD_6871,Running Shoes,Clothing,89.99,2026-01-13 15:29:17,session_752810,tablet
+user_9522,view,PROD_5370,USB-C Cable,Electronics,12.99,2026-01-13 15:29:17,session_538578,mobile
+user_8818,view,PROD_1617,Cookbook,Books,24.99,2026-01-13 15:29:17,session_268219,mobile
+user_1499,view,PROD_6438,USB-C Cable,Electronics,12.99,2026-01-13 15:29:17,session_845442,mobile
+user_3364,view,PROD_2878,Camping Tent,Sports & Outdoors,149.99,2026-01-13 15:29:17,session_620249,desktop
+user_6642,view,PROD_1102,Water Bottle,Sports & Outdoors,19.99,2026-01-13 15:29:17,session_490556,desktop
+user_4936,view,PROD_9774,Tennis Racket,Sports & Outdoors,89.99,2026-01-13 15:29:17,session_844339,desktop

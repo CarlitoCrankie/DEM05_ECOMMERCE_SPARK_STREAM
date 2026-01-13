@@ -1,0 +1,11 @@
+user_id,event_type,product_id,product_name,product_category,price,event_timestamp,session_id,device_type
+user_7652,purchase,PROD_8776,Remote Control Car,Toys & Games,49.99,2026-01-13 15:29:07,session_836627,mobile
+user_3580,purchase,PROD_2700,Board Game,Toys & Games,34.99,2026-01-13 15:29:07,session_143488,mobile
+user_8933,view,PROD_7211,Water Bottle,Sports & Outdoors,19.99,2026-01-13 15:29:07,session_929155,mobile
+user_1988,view,PROD_5012,Face Cream,Beauty,29.99,2026-01-13 15:29:07,session_853835,desktop
+user_1503,view,PROD_7192,Cookbook,Books,24.99,2026-01-13 15:29:07,session_317102,desktop
+user_1656,view,PROD_7832,Data Science Handbook,Books,42.99,2026-01-13 15:29:07,session_888209,tablet
+user_6025,view,PROD_3353,Bluetooth Speaker,Electronics,49.99,2026-01-13 15:29:07,session_316331,desktop
+user_7811,purchase,PROD_5307,Hair Dryer,Beauty,44.99,2026-01-13 15:29:07,session_503913,desktop
+user_6730,view,PROD_7650,LEGO Set,Toys & Games,59.99,2026-01-13 15:29:07,session_455035,tablet
+user_1019,view,PROD_1367,Coffee Maker,Home & Kitchen,79.99,2026-01-13 15:29:07,session_888662,mobile
