@@ -39,6 +39,7 @@ services:
     volumes:
       - ./spark:/opt/spark-apps
       - ./data:/opt/spark-data
+      - ./spark/jars:/opt/spark/jars/custom
     networks:
       - spark_network
     depends_on:

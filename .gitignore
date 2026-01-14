@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Spark & Data
+data/input/*.csv
+data/output/
+checkpoints/
+spark-warehouse/
+
+# Config files with credentials
+**/config.py
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+data/logs/
+
+# PostgreSQL
+postgres/data/
+postgres/*.sql.bak
+
+# Docker
+.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
