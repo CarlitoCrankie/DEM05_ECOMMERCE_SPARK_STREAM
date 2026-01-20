@@ -1,24 +1,17 @@
-```markdown
 # Real-Time E-Commerce Event Pipeline
 
-A real-time streaming pipeline that generates simulated e-commerce events, processes them using Apache Spark Structured Streaming, and stores the results in PostgreSQL — all orchestrated with Docker Compose.
+A streaming data pipeline that generates simulated e-commerce events, processes them with Apache Spark Structured Streaming, and stores them in PostgreSQL.
 
-docs/system_architecture.png
+## Overview
 
----
+This project demonstrates real-time data ingestion using:
 
-##  Overview
+- **Python** - Generates fake e-commerce events (product views, purchases)
+- **Apache Spark Structured Streaming** - Processes CSV files as they arrive
+- **PostgreSQL** - Stores processed events for analysis
+- **Docker Compose** - Orchestrates all services
 
-This project demonstrates scalable real-time data ingestion and processing using:
-
-- **Python** — Generates simulated e-commerce events (views, purchases)
-- **Apache Spark Structured Streaming** — Reads CSV events as they arrive
-- **PostgreSQL** — Stores processed, cleaned events
-- **Docker Compose** — Manages Spark, PostgreSQL, pgAdmin, and data generator services
-
----
-
-##  Architecture
+## Architecture
 
 ```
 <img width="7186" height="788" alt="image" src="https://github.com/user-attachments/assets/81f5f012-19de-4cc0-b2e2-3c7c8129dfc4" />
