@@ -13,9 +13,8 @@ This project demonstrates real-time data ingestion using:
 
 ## Architecture
 
-```
-<img width="7186" height="788" alt="image" src="https://github.com/user-attachments/assets/81f5f012-19de-4cc0-b2e2-3c7c8129dfc4" />
-````
+![System Architecture](docs/system_architecture.png)
+
 
 ---
 
