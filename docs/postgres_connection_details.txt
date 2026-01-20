@@ -1,0 +1,19 @@
+# PostgreSQL Connection Details
+# For use with Spark Structured Streaming Pipeline
+
+Host: localhost (or "postgres" from within Docker network)
+Port: 5432
+Database: ecommerce_events
+User: sparkuser
+Password: sparkpass123
+
+# JDBC URL (for Spark)
+jdbc:postgresql://postgres:5432/ecommerce_events
+
+# Direct connection string (for psql or external tools)
+postgresql://sparkuser:sparkpass123@localhost:5432/ecommerce_events
+
+# pgAdmin Access
+URL: http://localhost:5050
+Email: admin@admin.com
+Password: admin123

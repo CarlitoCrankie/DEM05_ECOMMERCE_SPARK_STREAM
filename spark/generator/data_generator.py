@@ -9,7 +9,11 @@ import time
 import logging
 from datetime import datetime
 
-from .config import (
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent))
+
+from config import (
     OUTPUT_DIR,
     EVENTS_PER_FILE,
     DELAY_BETWEEN_FILES,
@@ -17,7 +21,7 @@ from .config import (
     MAX_RETRIES,
     RETRY_DELAY,
 )
-from .logging_config import setup_logging
+from logging_config import setup_logging
 
 logger = logging.getLogger(__name__)
 
