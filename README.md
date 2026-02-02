@@ -13,7 +13,7 @@ This project demonstrates real-time data ingestion using:
 
 ## Architecture
 
-![System Architecture](docs/ecommerce_streaming_architecture.png)
+![System Architecture](docs/diagrams/ecommerce_streaming_architecture.png)
 
 
 ---
