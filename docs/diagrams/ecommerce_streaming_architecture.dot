@@ -1,0 +1,256 @@
+digraph "E-Commerce Streaming Architecture" {
+	graph [bb="0,0,1793,775",
+		bgcolor=white,
+		concentrate=false,
+		fontcolor="#2D3436",
+		fontname=Helvetica,
+		fontsize=12,
+		label="E-Commerce Streaming Architecture",
+		lheight=0.18,
+		lp="896.5,10.5",
+		lwidth=3.06,
+		nodesep=1.0,
+		pad=0.5,
+		rankdir=LR,
+		ranksep=1.5,
+		splines=ortho
+	];
+	node [fixedsize=true,
+		fontcolor="#2D3436",
+		fontname="Sans-Serif",
+		fontsize=13,
+		height=1.4,
+		imagescale=true,
+		label="\N",
+		labelloc=b,
+		shape=box,
+		style=rounded,
+		width=1.4
+	];
+	edge [color="#7B8894"];
+	subgraph "cluster_Docker Infrastructure" {
+		graph [bb="8,29,1785,767",
+			bgcolor="#E5F5FD",
+			fontname="Sans-Serif",
+			fontsize=12,
+			label="Docker Infrastructure",
+			labeljust=l,
+			lheight=0.18,
+			lp="81,756.5",
+			lwidth=1.81,
+			pencolor="#AEB6BE",
+			rankdir=LR,
+			shape=box,
+			style=rounded
+		];
+		subgraph "cluster_Data Storage & Management" {
+			graph [bb="1354,37,1777,384",
+				bgcolor="#EBF3E7",
+				fontname="Sans-Serif",
+				fontsize=12,
+				label="Data Storage & Management",
+				labeljust=l,
+				lheight=0.18,
+				lp="1450,373.5",
+				lwidth=2.44,
+				pencolor="#AEB6BE",
+				rankdir=LR,
+				shape=box,
+				style=rounded
+			];
+			"3674515428d14b20bc72f941edfcbf16"	[height=4.3056,
+				image="/usr/local/lib/python3.11/site-packages/resources/onprem/database/postgresql.png",
+				label="PostgreSQL 15
+:5432
+
+Database: ecommerce_events
+Table: user_events
+Indexes: event_id, user_id,
+event_type, timestamp",
+				pos="1412.5,200",
+				shape=none,
+				width=1.4028];
+			"5ca3224d77b94fdba655533bf32410b1"	[height=3.9028,
+				image="/usr/local/lib/python3.11/site-packages/resources/onprem/compute/server.png",
+				label="pgAdmin
+:5050
+
+• Web UI
+• DB Management
+• Query Editor",
+				pos="1718.5,200",
+				shape=none,
+				width=1.4028];
+			"3674515428d14b20bc72f941edfcbf16" -> "5ca3224d77b94fdba655533bf32410b1"	[color=purple,
+				dir=forward,
+				fontcolor="#2D3436",
+				fontname="Sans-Serif",
+				fontsize=13,
+				label="SQL Queries
+Monitoring",
+				lp="1573,214",
+				penwidth=1,
+				pos="e,1667.9,200 1463,200 1463,200 1657.9,200 1657.9,200",
+				style=dashed];
+		}
+		subgraph "cluster_Stream Processing (Spark Cluster)" {
+			graph [bb="683,158,1120,505",
+				bgcolor="#EBF3E7",
+				fontname="Sans-Serif",
+				fontsize=12,
+				label="Stream Processing (Spark Cluster)",
+				labeljust=l,
+				lheight=0.18,
+				lp="793,494.5",
+				lwidth=2.83,
+				pencolor="#AEB6BE",
+				rankdir=LR,
+				shape=box,
+				style=rounded
+			];
+			"42150e40b4b74b0487149560b3ffcf76"	[height=3.9028,
+				image="/usr/local/lib/python3.11/site-packages/resources/onprem/analytics/spark.png",
+				label="Spark Master
+:8080 :7077
+
+• Coordinates cluster
+• Manages query
+• Assigns tasks",
+				pos="741.5,321",
+				shape=none,
+				width=1.4028];
+			"786d2962d2b44dc38b18aa5b6d166138"	[height=4.3056,
+				image="/usr/local/lib/python3.11/site-packages/resources/onprem/analytics/spark.png",
+				label="Spark Worker
+:8081
+
+• 2 cores, 2GB RAM
+• Parse CSV
+• Transform data
+• ~500ms/batch",
+				pos="1061.5,321",
+				shape=none,
+				width=1.4028];
+			"42150e40b4b74b0487149560b3ffcf76" -> "786d2962d2b44dc38b18aa5b6d166138"	[color=orange,
+				dir=forward,
+				fontcolor="#2D3436",
+				fontname="Sans-Serif",
+				fontsize=13,
+				label="Task Assignment
+(micro-batch)",
+				lp="901.5,335",
+				penwidth=2,
+				pos="e,1010.8,321 792.2,321 792.2,321 1000.8,321 1000.8,321",
+				style=solid];
+		}
+		subgraph "cluster_Data Generation" {
+			graph [bb="16,172,133,491",
+				bgcolor="#EBF3E7",
+				fontname="Sans-Serif",
+				fontsize=12,
+				label="Data Generation",
+				labeljust=l,
+				lheight=0.18,
+				lp="74,480.5",
+				lwidth=1.39,
+				pencolor="#AEB6BE",
+				rankdir=LR,
+				shape=box,
+				style=rounded
+			];
+			"4532ed309ffc429b9b098df9e1e7fd2a"	[height=3.9028,
+				image="/usr/local/lib/python3.11/site-packages/resources/programming/language/python.png",
+				label="Data Generator
+(Python Container)
+
+• 10 events/file
+• 5s intervals
+• Atomic writes",
+				pos="74.5,321",
+				shape=none,
+				width=1.4028];
+		}
+		subgraph "cluster_State Management" {
+			graph [bb="1347,419,1478,738",
+				bgcolor="#EBF3E7",
+				fontname="Sans-Serif",
+				fontsize=12,
+				label="State Management",
+				labeljust=l,
+				lheight=0.18,
+				lp="1412.5,727.5",
+				lwidth=1.60,
+				pencolor="#AEB6BE",
+				rankdir=LR,
+				shape=box,
+				style=rounded
+			];
+			d95cc950d6d748b68c7171cd2994ff9b	[height=3.9028,
+				image="/usr/local/lib/python3.11/site-packages/resources/generic/storage/storage.png",
+				label="Checkpoint Storage
+./data/checkpoints
+
+• Fault tolerance
+• Offset tracking
+• Exactly-once",
+				pos="1412.5,568",
+				shape=none,
+				width=1.4028];
+		}
+		"7f81f60e822d41ba8807676be6c2cfc2"	[height=3.5,
+			image="/usr/local/lib/python3.11/site-packages/resources/generic/storage/storage.png",
+			label="Shared Volume
+./data/input
+
+• CSV file storage
+• Monitored by Spark",
+			pos="378.5,321",
+			shape=none,
+			width=1.4028];
+		"4532ed309ffc429b9b098df9e1e7fd2a" -> "7f81f60e822d41ba8807676be6c2cfc2"	[color=blue,
+			dir=forward,
+			fontcolor="#2D3436",
+			fontname="Sans-Serif",
+			fontsize=13,
+			label="CSV Files
+(events_*.csv)",
+			lp="226.5,335",
+			penwidth=2,
+			pos="e,327.84,321 125.04,321 125.04,321 317.84,321 317.84,321",
+			style=solid];
+		"7f81f60e822d41ba8807676be6c2cfc2" -> "42150e40b4b74b0487149560b3ffcf76"	[color=orange,
+			dir=forward,
+			fontcolor="#2D3436",
+			fontname="Sans-Serif",
+			fontsize=13,
+			label="readStream
+(maxFilesPerTrigger=1)",
+			lp="560,335",
+			penwidth=2,
+			pos="e,690.99,321 429.36,321 429.36,321 680.99,321 680.99,321",
+			style=solid];
+		"786d2962d2b44dc38b18aa5b6d166138" -> "3674515428d14b20bc72f941edfcbf16"	[color=green,
+			dir=forward,
+			fontcolor="#2D3436",
+			fontname="Sans-Serif",
+			fontsize=13,
+			label="JDBC Write
+(foreachBatch)
+Batch Insert",
+			lp="1229.5,283",
+			penwidth=3,
+			pos="e,1361.9,260.5 1112.2,260.5 1112.2,260.5 1351.9,260.5 1351.9,260.5",
+			style=bold];
+		"786d2962d2b44dc38b18aa5b6d166138" -> d95cc950d6d748b68c7171cd2994ff9b	[color=gray,
+			dir=forward,
+			fontcolor="#2D3436",
+			fontname="Sans-Serif",
+			fontsize=13,
+			label="State Management
+Offset Tracking",
+			lp="1229.5,519",
+			penwidth=1,
+			pos="e,1361.9,451.75 1112.2,451.75 1112.2,451.75 1351.9,451.75 1351.9,451.75",
+			style=dashed];
+	}
+}

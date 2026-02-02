@@ -67,6 +67,23 @@ services:
     depends_on:
       - spark-master
 
+  # Data Generator Container (NEW)
+  data-generator:
+    image: python:3.11-slim
+    container_name: ecommerce_generator
+    working_dir: /app
+    command: python -m generator
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./generator:/app/generator
+      - ./data:/app/data
+    networks:
+      - spark_network
+    depends_on:
+      - spark-master
+    restart: on-failure
+
   # pgAdmin - PostgreSQL GUI Tool
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -75,7 +92,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin123
     ports:
-      - "5050:80"  # Access pgAdmin at localhost:5050
+      - "5050:80"
     networks:
       - spark_network
     depends_on:
